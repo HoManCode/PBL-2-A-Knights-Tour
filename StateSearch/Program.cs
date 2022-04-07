@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 
 namespace KnightsTour
 {
@@ -59,8 +60,10 @@ namespace KnightsTour
                         board[i, j] = 0;
                     }
                 }
-
+                Stopwatch watch = new Stopwatch();
+                watch.Start();                
                 solve(board, row, column, move);
+                Console.WriteLine("(Total running time is {0})", watch.Elapsed);
                 printBoard(board);
             }
             //Ensures move occuring is valid 
