@@ -21,9 +21,10 @@ namespace KnightsTour
         private static int[] _colMove = { 1, 2, 2, 1, -1, -2, -2, -1 };
 
         //-- Methods --//
-        public Solution(int n)
+        public Solution()
         {
             /* Generates a new solution using the input n to create a board of size n x n */
+            int n = GetStart();
             this._board = new Board(n);
         }
 
@@ -60,6 +61,28 @@ namespace KnightsTour
             this._board.BoardArray[start.Item1, start.Item2] = 1; // Records the starting square's move number.
         }
 
+        public int GetStart()
+        {
+            // Prompts the user for a chessboard size continually until an acceptable size is chosen
+            int n;
+            Start:
+            Console.WriteLine("Please enter the size of the chess board: ");
+            try
+            {
+                n = Convert.ToInt32(Console.ReadLine());
+            }
+            catch
+            {
+                Console.WriteLine("You have entered an incorect input format.");
+                goto Start;
+            }
+            if (n < 5)
+            {
+                Console.WriteLine("Please enter a number greater than 4.");
+                goto Start;
+            }
+            return n;
+        }
         public static bool ValidMove(int[,] boardArray, int BoardSize, (int, int) move)
         {
             /* Returns true if the move is valid i.e. within the board space and to unvisited squares. */
@@ -208,7 +231,7 @@ namespace KnightsTour
         }
         static void Main(string[] args)
         {
-            Solution tester = new Solution(5);
+            Solution tester = new Solution();
             tester.FindValid();
         }
     }
