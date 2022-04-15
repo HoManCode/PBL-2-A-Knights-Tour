@@ -7,7 +7,7 @@ namespace KnightsTour
     Searches for a solution for the Knight's Tour problem on a board of size n x n from a randomly generated
     starting point, using backtracking and Warnsdorff's algorithm.
 
-    Created with reference to code available at:
+    Created by Hannah Smith (student number 216019732) with reference to code available at:
     https://kalkicode.com/warnsdorffs-algorithm-knights-tour-problem
     */
     public class Solution
@@ -16,6 +16,8 @@ namespace KnightsTour
         private Board _board;
         // Tracks the current square in the board during the search.
         private (int, int) _current;
+        // Records the starting point to check for a closed tour
+        private (int, int) _start;
         // Helper arrays to represent possible moves by the knight chess piece.
         private static int[] _rowMove = { 2, 1, -1, -2, -2, -1, 1, 2 };
         private static int[] _colMove = { 1, 2, 2, 1, -1, -2, -2, -1 };
@@ -24,7 +26,8 @@ namespace KnightsTour
         public Solution()
         {
             /* Generates a new solution using the input n to create a board of size n x n */
-            int n = GetStart();
+            //int n = GetStart();
+            int n = 9;
             this._board = new Board(n);
         }
 
@@ -48,7 +51,8 @@ namespace KnightsTour
                 if (timer.ElapsedMilliseconds > 5000)
                 {
                     PrintSolution(false);
-                    throw new TimeoutException();
+                    //throw new TimeoutException();
+                    break;
                 }
             }
         }
@@ -57,6 +61,7 @@ namespace KnightsTour
             /* Chooses a random square on the board to start searching from. */
             var rand = new Random();
             (int, int) start = (rand.Next(n), rand.Next(n));
+            this._start = start;
             this._current = start; // Sets the chosen square to the current search point.
             this._board.BoardArray[start.Item1, start.Item2] = 1; // Records the starting square's move number.
         }
@@ -231,8 +236,11 @@ namespace KnightsTour
         }
         static void Main(string[] args)
         {
-            Solution tester = new Solution();
-            tester.FindValid();
+            for (int i = 0; i < 10; i++)
+            {
+                Solution tester = new Solution();
+                tester.FindValid();
+            }
         }
     }
 }

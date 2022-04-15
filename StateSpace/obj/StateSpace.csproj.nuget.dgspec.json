@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Hannah\\Documents\\Courses\\Computer Science Bachelor\\SIT215 Computational Intelligence\\PBL2\\StateSpace\\StateSpace.csproj": {}
+    "C:\\Users\\Hannah\\Documents\\GitHub\\PBL-2-A-Knights-Tour\\StateSpace\\StateSpace.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Hannah\\Documents\\Courses\\Computer Science Bachelor\\SIT215 Computational Intelligence\\PBL2\\StateSpace\\StateSpace.csproj": {
+    "C:\\Users\\Hannah\\Documents\\GitHub\\PBL-2-A-Knights-Tour\\StateSpace\\StateSpace.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hannah\\Documents\\Courses\\Computer Science Bachelor\\SIT215 Computational Intelligence\\PBL2\\StateSpace\\StateSpace.csproj",
+        "projectUniqueName": "C:\\Users\\Hannah\\Documents\\GitHub\\PBL-2-A-Knights-Tour\\StateSpace\\StateSpace.csproj",
         "projectName": "StateSpace",
-        "projectPath": "C:\\Users\\Hannah\\Documents\\Courses\\Computer Science Bachelor\\SIT215 Computational Intelligence\\PBL2\\StateSpace\\StateSpace.csproj",
+        "projectPath": "C:\\Users\\Hannah\\Documents\\GitHub\\PBL-2-A-Knights-Tour\\StateSpace\\StateSpace.csproj",
         "packagesPath": "C:\\Users\\Hannah\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hannah\\Documents\\Courses\\Computer Science Bachelor\\SIT215 Computational Intelligence\\PBL2\\StateSpace\\obj\\",
+        "outputPath": "C:\\Users\\Hannah\\Documents\\GitHub\\PBL-2-A-Knights-Tour\\StateSpace\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Hannah\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oC4VUNAbb1c9yb49QRWOkcaIIG5Lpy0gmCrR3uMjbBdhzZCHZVNxB4ftZu8nLuYa+Qsd5vdyhn43WlMDesJXGQ==",
+  "dgSpecHash": "T+UNDk4UQOPysL2iEuuq6q3xR+pg7slfbbnzrPiUdPqKBGKhXA926X5GJOf+F2R3Q1A90XvDOPDSroUnE87b7w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Hannah\\Documents\\Courses\\Computer Science Bachelor\\SIT215 Computational Intelligence\\PBL2\\StateSpace\\StateSpace.csproj",
+  "projectFilePath": "C:\\Users\\Hannah\\Documents\\GitHub\\PBL-2-A-Knights-Tour\\StateSpace\\StateSpace.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

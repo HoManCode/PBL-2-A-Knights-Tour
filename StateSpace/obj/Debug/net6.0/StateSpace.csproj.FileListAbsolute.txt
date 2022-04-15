@@ -13,3 +13,18 @@ C:\Users\Hannah\Documents\Courses\Computer Science Bachelor\SIT215 Computational
 C:\Users\Hannah\Documents\Courses\Computer Science Bachelor\SIT215 Computational Intelligence\PBL2\StateSpace\obj\Debug\net6.0\StateSpace.pdb
 C:\Users\Hannah\Documents\Courses\Computer Science Bachelor\SIT215 Computational Intelligence\PBL2\StateSpace\obj\Debug\net6.0\StateSpace.genruntimeconfig.cache
 C:\Users\Hannah\Documents\Courses\Computer Science Bachelor\SIT215 Computational Intelligence\PBL2\StateSpace\obj\Debug\net6.0\ref\StateSpace.dll
+C:\Users\Hannah\Documents\GitHub\PBL-2-A-Knights-Tour\StateSpace\obj\Debug\net6.0\StateSpace.csproj.AssemblyReference.cache
+C:\Users\Hannah\Documents\GitHub\PBL-2-A-Knights-Tour\StateSpace\obj\Debug\net6.0\StateSpace.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hannah\Documents\GitHub\PBL-2-A-Knights-Tour\StateSpace\obj\Debug\net6.0\StateSpace.AssemblyInfoInputs.cache
+C:\Users\Hannah\Documents\GitHub\PBL-2-A-Knights-Tour\StateSpace\obj\Debug\net6.0\StateSpace.AssemblyInfo.cs
+C:\Users\Hannah\Documents\GitHub\PBL-2-A-Knights-Tour\StateSpace\obj\Debug\net6.0\StateSpace.csproj.CoreCompileInputs.cache
+C:\Users\Hannah\Documents\GitHub\PBL-2-A-Knights-Tour\StateSpace\obj\Debug\net6.0\StateSpace.dll
+C:\Users\Hannah\Documents\GitHub\PBL-2-A-Knights-Tour\StateSpace\obj\Debug\net6.0\refint\StateSpace.dll
+C:\Users\Hannah\Documents\GitHub\PBL-2-A-Knights-Tour\StateSpace\obj\Debug\net6.0\StateSpace.pdb
+C:\Users\Hannah\Documents\GitHub\PBL-2-A-Knights-Tour\StateSpace\bin\Debug\net6.0\StateSpace.exe
+C:\Users\Hannah\Documents\GitHub\PBL-2-A-Knights-Tour\StateSpace\bin\Debug\net6.0\StateSpace.deps.json
+C:\Users\Hannah\Documents\GitHub\PBL-2-A-Knights-Tour\StateSpace\bin\Debug\net6.0\StateSpace.runtimeconfig.json
+C:\Users\Hannah\Documents\GitHub\PBL-2-A-Knights-Tour\StateSpace\bin\Debug\net6.0\StateSpace.dll
+C:\Users\Hannah\Documents\GitHub\PBL-2-A-Knights-Tour\StateSpace\bin\Debug\net6.0\StateSpace.pdb
+C:\Users\Hannah\Documents\GitHub\PBL-2-A-Knights-Tour\StateSpace\obj\Debug\net6.0\StateSpace.genruntimeconfig.cache
+C:\Users\Hannah\Documents\GitHub\PBL-2-A-Knights-Tour\StateSpace\obj\Debug\net6.0\ref\StateSpace.dll
