@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Hannah\\.nuget\\packages\\": {}
+    "/Users/hannah/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Hannah\\Documents\\GitHub\\PBL-2-A-Knights-Tour\\StateSpace\\StateSpace.csproj",
+      "projectUniqueName": "/Users/hannah/Documents/GitHub/PBL-2-A-Knights-Tour/StateSpace/StateSpace.csproj",
       "projectName": "StateSpace",
-      "projectPath": "C:\\Users\\Hannah\\Documents\\GitHub\\PBL-2-A-Knights-Tour\\StateSpace\\StateSpace.csproj",
-      "packagesPath": "C:\\Users\\Hannah\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Hannah\\Documents\\GitHub\\PBL-2-A-Knights-Tour\\StateSpace\\obj\\",
+      "projectPath": "/Users/hannah/Documents/GitHub/PBL-2-A-Knights-Tour/StateSpace/StateSpace.csproj",
+      "packagesPath": "/Users/hannah/.nuget/packages/",
+      "outputPath": "/Users/hannah/Documents/GitHub/PBL-2-A-Knights-Tour/StateSpace/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Hannah\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/hannah/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -58,7 +58,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.202/RuntimeIdentifierGraph.json"
       }
     }
   }

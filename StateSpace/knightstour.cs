@@ -26,8 +26,7 @@ namespace KnightsTour
         public Solution()
         {
             /* Generates a new solution using the input n to create a board of size n x n */
-            //int n = GetStart();
-            int n = 9;
+            int n = GetStart();
             this._board = new Board(n);
         }
 
@@ -51,8 +50,7 @@ namespace KnightsTour
                 if (timer.ElapsedMilliseconds > 5000)
                 {
                     PrintSolution(false);
-                    //throw new TimeoutException();
-                    break;
+                    throw new TimeoutException();
                 }
             }
         }
@@ -236,11 +234,8 @@ namespace KnightsTour
         }
         static void Main(string[] args)
         {
-            for (int i = 0; i < 10; i++)
-            {
-                Solution tester = new Solution();
-                tester.FindValid();
-            }
+            Solution tester = new Solution();
+            tester.FindValid();
         }
     }
 }

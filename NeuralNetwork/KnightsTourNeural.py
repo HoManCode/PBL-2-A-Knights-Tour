@@ -132,8 +132,8 @@ class KnightTour:
             n = 0
             while True:
                 num_of_active, num_of_changes = self.update_neurons()
-                #print('_______________info_________________')
-                #print('active', num_of_active, 'changes', num_of_changes)
+                print('_______________info_________________')
+                print('active', num_of_active, 'changes', num_of_changes)
                 if num_of_changes == 0:
                     break
                 if self.check_degree():
@@ -184,9 +184,6 @@ class KnightTour:
         # Method finds and prints the solution
         visited = []
 
-        # random initial position
-        #initial_x = random.randint(0, self.board_size[0]-1)
-        #initial_y = random.randint(0, self.board_size[1]-1)
         current_vertex = (0, 0)
         labels = np.zeros(self.board_size, dtype=np.int16)
         # gets the index of active neurons.
@@ -269,16 +266,10 @@ def print_time_lapsed(sec):
     mins = mins % 60
     print('Time lapsed = {0}:{1}:{2}'.format(int(hours), int(mins), sec))
 
-def main():
 
-    #board_size = inputBoardSize()
-    board_size = 8
-    tour = KnightTour(((board_size,board_size)))
-    start_time = time.time()
-    tour.neural_network()
-    stop_time = time.time()
-    print_time_lapsed(stop_time - start_time)
-
-
-if __name__ == '__main__':
-    main()
+board_size = inputBoardSize()
+tour = KnightTour(((board_size,board_size)))
+start_time = time.time()
+tour.neural_network()
+stop_time = time.time()
+print_time_lapsed(stop_time - start_time)
