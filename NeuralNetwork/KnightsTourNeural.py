@@ -9,19 +9,16 @@ starting point, using DFS. Each legal Knight's move is represented by a neuron. 
 that share a vertex with the neuron in question.
 If a neuron output is 1 it is the correct solution.
 """
-
+#Imports the necessary libraries
 import numpy as np
 import time
 import random
-
+    
+ #Defines legal Knight's moves in chess.
 VALID_KNIGHT_MOVES = [(1, -2), (2, -1), (2, 1), (1, 2), (-1, 2), (-2, 1), (-2, -1), (-1, -2)]
 DEBUG = False
 
 class KnightTour:
-    """
-    Defines legal Knight's moves in chess.
-    """
-
     def __init__(self, board_size):
         # Initializes necessary arrays & board size
         self.board_size = board_size
@@ -40,19 +37,19 @@ class KnightTour:
             self.print_board(self.board)
 
         self.init()
-
+        
+    # Method to print the relevant sized board
     def print_board(self, board):
-        # Method to print the relevant sized board
         if len(board) == self.board_size[0]:
             for i in range(self.board_size[0]):
                 print(board[i])
         else:
             for i in range(0, len(board), 6):
                 print(board[i: i+6])
-
+                
+    # Method to find all the possible Knight moves AKA neurons on the board
+    # Also sets the neuron_vertices and neuron neighbours
     def init(self):
-        # Method to find all the possible Knight moves AKA neurons on the board
-        # Also sets the neuron_vertices and neuron neighbours
         neuron_num = 0
         # For loop iterates through the board for both x and y coordinates
         for x_position_1 in range(self.board_size[0]):
@@ -63,7 +60,7 @@ class KnightTour:
                     j = x_position_2 * self.board_size[1] + y_position_2
 
                     # each neuron has 2 vertices
-                    # this ensures that we add the neuron only once.
+                    # this ensures that we add the neuron only once
                     if j > i:
                         self.board[x_position_1][y_position_1].add(neuron_num)
                         self.board[x_position_2][y_position_2].add(neuron_num)
@@ -84,10 +81,10 @@ class KnightTour:
             self.print_board(self.neuron_vertices)
             print('neighbours')
             self.print_board(self.neuron_neighbours)
-
+            
+    # Initializes each neuron state to 0 and a random number
+    # between 0 and 1 for neuron outputs.
     def initialize_neurons(self):
-        # Initializes each neuron state to 0 and a random number
-        # between 0 and 1 for neuron outputs.
         self.neuron_outputs = np.random.randint(2, size=(len(self.neuron_vertices)), dtype=np.int16)
         self.neuron_states = np.zeros((len(self.neuron_vertices)), dtype=np.int16)
 
@@ -97,9 +94,9 @@ class KnightTour:
             print(self.neuron_states)
             print('outputs')
             print(self.neuron_outputs)
-
+            
+    # Updates the state and output of each neuron
     def update_neurons(self):
-        # Updates the state and output of each neuron
         sum_of_neighbours = np.zeros((len(self.neuron_states)), dtype=np.int16)
         for i in range(len(self.neuron_neighbours)):
             sum_of_neighbours[i] = self.neuron_outputs[list(self.neuron_neighbours[i])].sum()
@@ -122,9 +119,9 @@ class KnightTour:
             print(self.neuron_outputs)
 
         return number_of_active, number_of_changes
-
+    
+     # Method finds a CLOSED knight's tour
     def neural_network(self):
-        # Method finds a CLOSED knight's tour
         even = False
         time = 0
         while True:
@@ -151,10 +148,10 @@ class KnightTour:
                     return
                 else:
                     even = False
-
+                    
+    # Ensures solution is in fact a knight's tour and not two or more independent hamiltonian graphs
+    # gets the index of active neurons.
     def check_connected_components(self):
-        # Ensures solution is in fact a knight's tour and not two or more independent hamiltonian graphs
-        # gets the index of active neurons.
         active_neuron_indices = np.argwhere(self.neuron_outputs == 1).ravel()
         # dfs through all active neurons starting from the first element.
         connected = self.dfs_through_neurons(neuron=active_neuron_indices[0], active_neurons=active_neuron_indices)
@@ -162,10 +159,10 @@ class KnightTour:
             return True
         return False
 
+    # From a starting active neuron a DFS algorithm is performed
+    # Returning TRUE only if there are no more active neurons in the array
+    # removes the neuron from the active neurons list.
     def dfs_through_neurons(self, neuron, active_neurons):
-        # From a starting active neuron a DFS algorithm is performed
-        # Returning TRUE only if there are no more active neurons in the array
-        # removes the neuron from the active neurons list.
         active_neurons = np.setdiff1d(active_neurons, [neuron])
         # first finds the neighbours of this neuron and then finds which of them are active.
         active_neighbours = np.intersect1d(active_neurons, list(self.neuron_neighbours[neuron]))
@@ -179,9 +176,9 @@ class KnightTour:
             else:
                 return False
         return self.dfs_through_neurons(neuron=active_neighbours[0], active_neurons=active_neurons)
-
+    
+    # Method finds and prints the solution
     def get_solution(self):
-        # Method finds and prints the solution
         visited = []
 
         current_vertex = (0, 0)
@@ -205,9 +202,9 @@ class KnightTour:
             # removes the selected neighbour from all active neurons
             active_neuron_indices = np.setdiff1d(active_neuron_indices, [vertex_neighbours[0]])
         print(labels)
-
+        
+    # Method returns the vertices of all active neurons whose output is 1
     def get_active_neurons_vertices(self):
-        # Method returns the vertices of all active neurons whose output is 1
 
         # gets the index of active neurons.
         active_neuron_indices = np.argwhere(self.neuron_outputs == 1).ravel()
@@ -216,9 +213,9 @@ class KnightTour:
             active_neuron_vertices.append(self.neuron_vertices[i])
         return active_neuron_vertices
 
+    # Method returns True if ALL vertices have degree =2
+    # Updates the degree for all active neurons and checks for any numbers other than 2
     def check_degree(self):
-        # Method returns True if ALL vertices have degree =2
-        # Updates the degree for all active neurons and checks for any numbers other than 2
         # gets the index of active neurons.
         active_neuron_indices = np.argwhere(self.neuron_outputs == 1).ravel()
         degree = np.zeros((self.board_size[0], self.board_size[1]), dtype=np.int16)
@@ -236,16 +233,16 @@ class KnightTour:
         if degree[degree != 2].size == 0:
             return True
         return False
-
+    
+    # Returns all valid moves for the knight given its current position
     def find_neighbours(self, pos):
-        # Returns all valid moves for the knight given its current position
         neighbours = set()
         for (dx, dy) in VALID_KNIGHT_MOVES:
             new_x, new_y = pos[0]+dx, pos[1]+dy
             if 0 <= new_x < self.board_size[0] and 0 <= new_y < self.board_size[1]:
                 neighbours.add((new_x, new_y))
         return neighbours
-
+#Takes user input for N board size
 def inputBoardSize():
     while True:
         try:
@@ -259,6 +256,7 @@ def inputBoardSize():
                 print("Board size must be greater than 4!")
     return board_size
 
+#Times solution return
 def print_time_lapsed(sec):
     mins = sec // 60
     sec = sec % 60
