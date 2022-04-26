@@ -3,8 +3,8 @@
 """
 https://github.com/NiloofarShahbaz/knight-tour-neural-network/blob/master/knight_tour.py
 
-Searches for a solution for the Knight's Tour problem on a board of size n x n from a randomly generated
-starting point, using DFS. Each legal Knight's move is represented by a neuron. All neurons have a state,
+Searches for a solution for the Knight's Tour problem on a board of size n x n from starting point (0,0) using DFS. 
+Each legal Knight's move is represented by a neuron. All neurons have a state,
 2 vertices (which represent positions on the board), an output, and a maximum of 8 neighbours **neighbours are neurons
 that share a vertex with the neuron in question.
 If a neuron output is 1 it is the correct solution.
