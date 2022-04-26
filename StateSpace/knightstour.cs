@@ -26,7 +26,7 @@ namespace KnightsTour
         public Solution()
         {
             /* Generates a new solution using the input n to create a board of size n x n */
-            int n = GetStart();
+            int n = GetBoardSize();
             this._board = new Board(n);
         }
 
@@ -64,7 +64,7 @@ namespace KnightsTour
             this._board.BoardArray[start.Item1, start.Item2] = 1; // Records the starting square's move number.
         }
 
-        public int GetStart()
+        public int GetBoardSize()
         {
             // Prompts the user for a chessboard size continually until an acceptable size is chosen
             int n;
